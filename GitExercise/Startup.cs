@@ -4,6 +4,8 @@ namespace GitExercise
 {
     public class Startup
     {
+      
+        
         public static void Main()
         {
             Console.WriteLine("Console Calculator App");
@@ -35,10 +37,21 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
+                    OptionsManager.Power(a, b);
+                    break;
+                case "log":
+                    OptionsManager.Log(a, b);
+                    break;
+                case "fact":
+                    OptionsManager.Facturial(a, b);
+                    break;     
             }
+            
 
             Console.WriteLine("Pres any key to close the app...");
             Console.ReadKey(true);
         }
+        
     }
+    
 }
