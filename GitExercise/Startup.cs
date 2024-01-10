@@ -6,6 +6,8 @@ namespace GitExercise
     {
         public static void Main()
         {
+            while (true)
+            {
             Console.WriteLine("Console Calculator App");
             Console.WriteLine(new string('-', 15));
 
@@ -35,10 +37,20 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
-            }
+                case "dr":
+                    OptionsManager.DivideRemainder(a, b);
+                    break;
+                case "ex":
+                    Console.Clear();
+                    Console.WriteLine("Goodbye");
+                    Console.ReadKey();
+                    return;
+                }
 
             Console.WriteLine("Pres any key to close the app...");
             Console.ReadKey(true);
+
+            }
         }
     }
 }
